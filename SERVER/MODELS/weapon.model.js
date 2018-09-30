@@ -23,4 +23,4 @@ let weaponSchema = new Schema({
     lore: { type: String, required: true }
 });
 
-module.exports = mongoose.Schema('character', weaponSchema);
+module.exports = mongoose.Schema('weapon', weaponSchema);
