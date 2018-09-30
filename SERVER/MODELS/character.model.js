@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
-let warriorSchema = new Schema({
-    warriorName: { type: String, required: true},
+let CharacterSchema = new Schema({
+    characterName: { type: String, required: true},
     health: { type: Number, required: true},
     physicsDefese: { type: Number, required: true},
     magicDefense: { type: Number, required: true},
@@ -14,4 +14,4 @@ let warriorSchema = new Schema({
     move: { type: Number, required: true},
 });
 
-module.exports = mongoose.Schema('warrior', warriorSchema);
+module.exports = mongoose.Schema('character', CharacterSchema);
