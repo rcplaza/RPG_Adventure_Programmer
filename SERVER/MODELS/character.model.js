@@ -11,7 +11,15 @@ let CharacterSchema = new Schema({
     magicAttack: { type: Number, required: true},
     criticalRate: { type: Number, required: true},
     mana: { type: Number, required: true},
-    move: { type: Number, required: true},
+    equip: {
+        head: { required: false },
+        body: { required: false },
+        arms: { required: false },
+        weapon: { required: false },
+        legs: { required: false },
+        accesory: { required: false }
+    },
+    move: { type: Number, required: true}
 });
 
 module.exports = mongoose.Schema('character', CharacterSchema);
