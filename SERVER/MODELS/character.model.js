@@ -1,6 +1,8 @@
 const mongoose = require('mongoose');
-const weapon = require('./weapon.model');
+
+const helmet = require('./helmet.model');
 const armor = require('./armor.model');
+const weapon = require('./weapon.model');
 
 const { Schema } = mongoose;
 
@@ -15,7 +17,7 @@ let CharacterSchema = new Schema({
     criticalRate: { type: Number, required: true},
     mana: { type: Number, required: true},
     equip: {
-        head: { required: false },
+        head: { type: Schema.ObjectId, ref: helmet, required: false },
         body: { type: Schema.ObjectId, ref: armor, required: false },
         arms: { required: false },
         weapon: { type: Schema.ObjectId, ref: weapon, required: false },
