@@ -1,10 +1,11 @@
 const mongoose = require('mongoose');
 
-const helmet = require('./helmet.model');
-const armor = require('./armor.model');
-const arms = require('./arms.model');
-const weapon = require('./weapon.model');
-const legs = require('./legs.model');
+const helmet = require('./ARMOR/helmet.model');
+const armor = require('./ARMOR.model');
+const arms = require('./ARMOR/arms.model');
+const weapon = require('./ARMOR/weapon.model');
+const legs = require('./ARMOR/legs.model');
+const accesory = require('./ARMOR/accesory.model');
 
 const { Schema } = mongoose;
 
@@ -23,8 +24,8 @@ let CharacterSchema = new Schema({
         body: { type: Schema.ObjectId, ref: armor, required: false },
         arms: { type: Schema.ObjectId, ref: arms, required: false },
         weapon: { type: Schema.ObjectId, ref: weapon, required: false },
-        legs: { ype: Schema.ObjectId, ref: legs, required: false },
-        accesory: { required: false }
+        legs: { type: Schema.ObjectId, ref: legs, required: false },
+        accesory: { type: Schema.ObjectId, ref: accesory, required: false }
     },
     move: { type: Number, required: true}
 });
