@@ -1,7 +1,11 @@
 const mongoose = require('mongoose');
+
+const armorSet = require('./armorSet.model');
+
 const { Schema } = mongoose;
 
 let weaponSchema = new Schema({
+    armorSet: { type: Schema.ObjectId, ref: armorSet, required: false },
     weaponName: { type: String, required: true },
     type: { type: String, required: true },
     rarity: { type: String, required: true },
