@@ -4,7 +4,7 @@ const { Schema } = mongoose;
 let weaponSchema = new Schema({
     weaponName: { type: String, required: true },
     type: { type: String, required: true },
-    rarity: { type: String, required: true},
+    rarity: { type: String, required: true },
     typeDamage: { type: String, required: true },
     damage: { type: Number, required: true },
     bonus: {
